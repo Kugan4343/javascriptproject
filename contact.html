@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebay</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        .footer{
+    margin-top: 20px;
+    padding: 40px;
+    background-color: #1d232c;
+    color: white;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.navbar-links{
+    display: flex;
+    column-gap: 20px;
+}
+.navbar-link a{
+    text-decoration: none;
+    color: #1d232c;
+
+}
+.navbar-link a:hover{
+    text-decoration: underline;
+    color:#09090b;
+}
+.navbar-menu-toggle{
+    display: none;
+}
+.side-navbar{
+    background-color: #1d2c24;
+    width: 30%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -60%;
+    padding: 10px;
+    color: white;
+    transition: 2s;
+}
+.side-navbar-link{
+    margin-bottom: 30px;
+}
+.side-navbar-link a{
+    text-decoration: none;
+    color: white;
+}
+.side-navbar-link a:hover{
+    text-decoration: underline;
+    color: #1d232c;
+}
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <h1 style="color: #1d4ed8;">Ebay</h1>
+        <div class="navbar-links">
+          <p class="navbar-link"><a href="index.html">Home</a></p>
+          <p class="navbar-link"><a href="collection.html">Collections</a></p>
+          <p class="navbar-link"><a href="contact.html">Contact</a></p>
+        </div>
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+          <i class="fa-solid fa-sliders"></i>
+        </div>
+      </nav>
+      <div class="side-navbar">
+        <p style="text-align: right;" onclick="closenavbar()">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </p>
+      <div class="side-navbar-links">
+        <p class="side-navbar-link"><a href="index.html">Home</a></p>
+        <p class="side-navbar-link"><a href="collection.html">Collections</a></p>
+        <p class="side-navbar-link"><a href="contact.html">Contact</a></p>
+      </div>
+  </div>
+
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form action="process_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <div class="footer">
+        <div class="footer-container">
+          <div class="footer-box">
+            <h2 class="heading-text">Ebay</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, aut.</p>
+            <div class="footer-icon-container">
+              <i class="fa-brands fa-facebook" style="color: #ffff;"></i>
+              <i class="fa-brands fa-whatsapp" style="color: #ffff;"></i>
+              <i class="fa-brands fa-instagram" style="color: #ffff;"></i>
+      
+            </div>
+          </div>
+        </div>
+        <p>@ 2024 Ebay.com</p>
+      </div>
+
+
+
+      <script src="contact.js"></script>
+
+</body>
+</html>
